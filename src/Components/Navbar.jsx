@@ -9,7 +9,7 @@ const Navbar = () => {
     const Button2 = {
         borderRadius:'20px', color:'#457EFF', padding:'10px 20px', border:'1px solid #457EFF',backgroundColor:'#FFFFFF'
     }
-    const jcs = { backgroundColor:'#FFFFFF', }
+    const jcs = { backgroundColor:'#FFFFFF'
     }
 
     return (
@@ -32,7 +32,7 @@ const Navbar = () => {
         display='flex' 
         justifyContent='space-between' >
             <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={jcs} Button>
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={jcs}> Jobs </MenuButton>
                 <MenuList>
                     <MenuItem>Download</MenuItem>
                     <MenuItem>Create a Copy</MenuItem>

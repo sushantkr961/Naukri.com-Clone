@@ -1,0 +1,125 @@
+.footer {
+    /* border: 1px solid red; */
+    background-color: #2E3339;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.sk_deta{
+    /* border: 1px solid red; */
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    color:white;
+    background-color: #2E3339;
+    padding: 10px 15px;
+    width: 67%;
+    margin: auto;
+}
+.sk_link img{
+    width: 9em;
+    cursor: pointer;
+}
+.sk_follow{
+    width: 80%;
+    margin-top: -50px;
+}
+.sk_follow div{
+    /* border: 1px solid; */
+    display: flex;
+}
+.sk_follow div img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.sk_deta a{
+    text-decoration: none;
+    color: #b6b8ba;
+}
+
+.sk_deta a:hover{
+    color:white;
+}
+.sk_info{
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+    left: 266px;
+    top: 0px;
+}
+.sk_info p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.sk_link{
+    /* border: 1px solid red; */
+    font-size: 12px;
+}
+.sk_link p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.sk_jobseekers{
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+}
+.sk_jobseekers p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.sk_brjob{
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+}
+
+.sk_brjob p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.sk_services{
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+}
+
+.sk_services p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.sk_learn{
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+    /* width: 166px; */
+}
+
+.sk_learn p:nth-child(1){
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.sk_emp{
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+}
+
+.sk_emp p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.sk_box{
+    /* position: absolute;
+    right: 344px;
+    top: 272px; */
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+}
+
+.sk_box p:nth-child(1){
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.sk_follow{
+    /* border: 1px solid red; */
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+    color:#B6B8BA;
+}

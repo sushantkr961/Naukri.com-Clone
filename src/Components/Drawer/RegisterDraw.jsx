@@ -65,7 +65,7 @@ function RegisterDraw() {
             <Button color='#FFFFFF' bg='#FF7555' w='100%' mt='25px' colorScheme='blue'>Register Now</Button>
             <Text mt='25px' fontWeight='600' color='#445578' fontSize='13px' >Already Registered</Text>
 
-            <Link to='/jobs'><Button w='110px' colorScheme='blue'>Login</Button></Link>
+            <Link to='/Login'><Button w='110px' colorScheme='blue'>Login</Button></Link>
             
             </DrawerBody>
           </DrawerContent>

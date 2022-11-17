@@ -18,7 +18,7 @@ const Navbar = () => {
     gap='2' 
     height='75px'
     padding='10px'
-    borderBottom='1px solid #8292B4'
+    // borderBottom='1px solid #8292B4'
     margin='auto'>
         <Box mr='50px'>
             <Link to='/'>

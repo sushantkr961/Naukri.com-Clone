@@ -1,79 +1,66 @@
-import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { AppContext } from "../Context/AppContext";
+import {
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  Checkbox,
+  Stack,
+  Link,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
-function userLogin(state) {
-  return fetch(`https://reqres.in/api/login`, {
-    method: "POST",
-    headers: { "Content-Type": "Application/json" },
-    body: JSON.stringify(state),
-  }).then((res) => res.json());
-}
-
-function Login() {
-  const [count, setCount] = useState(false);
-  const [state, setState] = useState({ email: "", password: "" });
-  const navigate = useNavigate();
-  const authState = useContext(AppContext);
-
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setState({ ...state, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    userLogin(state).then((res) => {
-      authState.handleLogin(res.token);
-      navigate("/");
-    });
-  };
-  const dis = () => {
-    setCount(true);
-  };
-
+export default function SimpleCard() {
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            <input
-              name="email"
-              value={state.email}
-              onChange={onChange}
-              type="email"
-              placeholder="email"
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            <input
-              name="password"
-              value={state.password}
-              onChange={onChange}
-              type="password"
-              placeholder="password"
-            />
-          </label>
-        </div>
-        <div>
-          <button
-            // toilet
-            onClick={dis}
-            disabled={count === true}
-            type="submit"
-          >
-            SUBMIT
-          </button>
-        </div>
-      </form>
-      <div>
-        <Link to="/">
-          Go Back
-        </Link>
-      </div>
-    </div>
+    <Flex
+      minH={'100vh'}
+      align={'center'}
+      justify={'center'}
+      bg={useColorModeValue('gray.50', 'gray.800')}>
+      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack align={'center'}>
+          <Heading fontSize={'4xl'}>Sign in to your account</Heading>
+          <Text fontSize={'lg'} color={'gray.600'}>
+            to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
+          </Text>
+        </Stack>
+        <Box
+          rounded={'lg'}
+          bg={useColorModeValue('white', 'gray.700')}
+          boxShadow={'lg'}
+          p={8}>
+          <Stack spacing={4}>
+            <FormControl id="email">
+              <FormLabel>Email address</FormLabel>
+              <Input type="email" />
+            </FormControl>
+            <FormControl id="password">
+              <FormLabel>Password</FormLabel>
+              <Input type="password" />
+            </FormControl>
+            <Stack spacing={10}>
+              <Stack
+                direction={{ base: 'column', sm: 'row' }}
+                align={'start'}
+                justify={'space-between'}>
+                <Checkbox>Remember me</Checkbox>
+                <Link color={'blue.400'}>Forgot password?</Link>
+              </Stack>
+              <Button
+                bg={'blue.400'}
+                color={'white'}
+                _hover={{
+                  bg: 'blue.500',
+                }}>
+                Sign in
+              </Button>
+            </Stack>
+          </Stack>
+        </Box>
+      </Stack>
+    </Flex>
   );
 }
-export default Login;

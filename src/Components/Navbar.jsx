@@ -2,8 +2,8 @@ import React from 'react';
 import { Flex, Box, ButtonGroup, Button, Img, Menu, MenuButton, MenuList, MenuItem, Spacer } from "@chakra-ui/react";
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
-import LoginDraw from './Drawer/LoginDraw';
-import RegisterDraw from './Drawer/RegisterDraw';
+// import LoginDraw from './Drawer/LoginDraw';
+// import RegisterDraw from './Drawer/RegisterDraw';
 
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
             <Menu>
                 <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={jcs}> <Link to="/"> Jobs </Link></MenuButton>
                 <MenuList>
-                    <MenuItem> <Link to="/jobs">Popular Jobs</Link> </MenuItem>
+                    <MenuItem><Link to="/jobs">Popular Jobs</Link> </MenuItem>
                     <MenuItem><Link to='/jobs'>Jobs in demand</Link></MenuItem>
                     <MenuItem><Link to='/jobs'>Job by Location</Link></MenuItem>
                     <MenuItem><Link to='/jobs'>Explore More Jobs</Link></MenuItem>
@@ -75,8 +75,12 @@ const Navbar = () => {
 
         <Box>
             <ButtonGroup gap='2'>
-                <LoginDraw />
-                <RegisterDraw />
+                {/* <LoginDraw />
+                <RegisterDraw /> */}
+                <Link to='/login'>
+                <Button fontSize='20px' borderRadius='20px' color='#457EFF' padding='10px 20px' border='1px solid #457EFF' backgroundColor='#FFFFFF' _hover={{backgroundColor: "#457EFF", color: '#FFFFFF'}}>Login</Button>
+                </Link>
+                
             </ButtonGroup>
         </Box>
         <Box>

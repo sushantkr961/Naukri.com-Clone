@@ -1,9 +1,12 @@
 import AllRoutes from "./Components/AllRoutes";
+import { UserAuthContextProvider } from "./Components/Context/UserAuthContext";
 
 function App() {
   return (
     <>
-      <AllRoutes />
+      <UserAuthContextProvider>
+        <AllRoutes />
+      </UserAuthContextProvider>
     </>
   );
 }

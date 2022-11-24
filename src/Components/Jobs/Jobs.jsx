@@ -71,7 +71,7 @@ const Jobs = () => {
     </Box>
     </Box>
     </Flex>
-    <Box margin='auto' w='250px' mt='25px' >
+    <Box margin='auto' w='300px' mt='25px' >
         <Button border='3px solid #457EFF' color='black' fontWeight='bold' mr='20px' disabled={page === 1} onClick={() => setPage(page - 1)}>PREV</Button>
         <Button border='3px solid #457EFF' color='black' fontWeight='bold'>{page}</Button>
         <Button border='3px solid #457EFF' color='black' fontWeight='bold' ml='20px' onClick={() => setPage(page + 1)}>NEXT</Button>

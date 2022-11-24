@@ -28,9 +28,9 @@ const Navbar2 = () => {
       gap="2"
       height="75px"
       padding="10px"
-    //   border='1px solid #8292B4'
+      //   border='1px solid #8292B4'
       margin="auto"
-      justify='space-evenly'
+      justify="space-evenly"
     >
       <Box mr="30px">
         <Link to="/">
@@ -116,11 +116,17 @@ const Navbar2 = () => {
       {/* <Input w='260px' type='search' placeholder='Search Jobs' borderRadius='25px' /> */}
       <Stack spacing={4}>
         <InputGroup>
-          <InputRightElement borderRadius='50%' backgroundColor='#457EFF'
+          <InputRightElement
+            borderRadius="50%"
+            backgroundColor="#457EFF"
             pointerEvents="none"
             children={<Search2Icon color="#FFFFFF" />}
           />
-          <Input type="search" placeholder="Search jobs here" borderRadius='25px' />
+          <Input
+            type="search"
+            placeholder="Search jobs here"
+            borderRadius="25px"
+          />
         </InputGroup>
       </Stack>
 
@@ -130,6 +136,19 @@ const Navbar2 = () => {
                 <RegisterDraw/>
             </ButtonGroup>
         </Box> */}
+      <Link to="/login">
+        <Button
+          fontSize="20px"
+          borderRadius="20px"
+          color="#457EFF"
+          padding="10px 20px"
+          border="1px solid #457EFF"
+          backgroundColor="#FFFFFF"
+          _hover={{ backgroundColor: "#457EFF", color: "#FFFFFF" }}
+        >
+          Login
+        </Button>
+      </Link>
       <Box>
         <Menu>
           <MenuButton

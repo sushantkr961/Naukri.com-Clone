@@ -17,7 +17,7 @@ import {
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import Navbar2 from "../Components/Jobs/Navbar2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../Components/Context/UserAuthContext";
 
 export default function Register() {
@@ -26,12 +26,14 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { signup } = useUserAuth();
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
       await signup(email, password);
+      navigate("/login")
     } catch (error) {
       setError(error.message);
     }
@@ -57,7 +59,7 @@ export default function Register() {
               to enjoy all of our cool features ✌️
             </Text> */}
           </Stack>
-          {error && <Alert variant="danger">{ error }</Alert>}
+          {error && <Alert variant="danger" bg='#ff9194' borderRadius='10px' color='#800000'>{ error }</Alert>}
           <form onSubmit={handleSubmit}>
           <Box
           // border='1px solid red'
@@ -69,20 +71,20 @@ export default function Register() {
             
             <Stack spacing={4}>
               <HStack>
-                <Box>
+                {/* <Box>
                   <FormControl id="firstName" 
                   // isRequired
                   >
                     <FormLabel>First Name</FormLabel>
                     <Input type="text" />
                   </FormControl>
-                </Box>
-                <Box>
+                </Box> */}
+                {/* <Box>
                   <FormControl id="lastName">
                     <FormLabel>Last Name</FormLabel>
                     <Input type="text" />
                   </FormControl>
-                </Box>
+                </Box> */}
               </HStack>
               <FormControl id="email" 
               // isRequired

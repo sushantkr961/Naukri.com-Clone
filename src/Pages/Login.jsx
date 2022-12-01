@@ -41,7 +41,7 @@ export default function Login() {
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
     try {
-      await googleSignIn;
+      await googleSignIn();
       navigate("/profile");
       console.log("hello")
     } catch (error) {

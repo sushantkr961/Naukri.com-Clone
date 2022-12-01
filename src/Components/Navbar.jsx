@@ -2,11 +2,15 @@ import React from 'react';
 import { Flex, Box, ButtonGroup, Button, Img, Menu, MenuButton, MenuList, MenuItem, Spacer } from "@chakra-ui/react";
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 // import LoginDraw from './Drawer/LoginDraw';
 // import RegisterDraw from './Drawer/RegisterDraw';
 
 
 const Navbar = () => {
+
+    const { isAuth } = useSelector((store) => store.login)
+    // cosnt
 
     const jcs = { backgroundColor:'#FFFFFF'
     }
@@ -78,7 +82,7 @@ const Navbar = () => {
                 {/* <LoginDraw />
                 <RegisterDraw /> */}
                 <Link to='/login'>
-                <Button fontSize='20px' borderRadius='20px' color='#457EFF' padding='10px 20px' border='1px solid #457EFF' backgroundColor='#FFFFFF' _hover={{backgroundColor: "#457EFF", color: '#FFFFFF'}}>Login</Button>
+                <Button fontSize='20px' borderRadius='20px' color='#457EFF' padding='10px 20px' border='1px solid #457EFF' backgroundColor='#FFFFFF' _hover={{backgroundColor: "#457EFF", color: '#FFFFFF'}}  onClick={handleAuth}>{isAuth ? "Logout":"Login"}</Button>
                 </Link>
                 
             </ButtonGroup>

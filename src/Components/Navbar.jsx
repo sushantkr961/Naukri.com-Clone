@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
 
     const { isAuth } = useSelector((store) => store.login)
-    // cosnt
+    const handleAuth = () =>{}
 
     const jcs = { backgroundColor:'#FFFFFF'
     }

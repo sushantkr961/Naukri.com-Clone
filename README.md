@@ -1,14 +1,8 @@
-
-## To start the project
-npm install
-npm start
-npx json-server --watch db.json
-
-
 # Naukri.com -- Clone (Individual)
 Naukri.com is an Indian employment website operting in India and Middle East. It was founded in March 1997 by Indian bussinessman Sanjeev Bikhchandani. Naukri.com is the largest employment website in India.
 <br>
-The tripadvisor website has been cloned by myself project of our construct week at **Masai School** over 5 days.
+The Naukri.com website has been cloned by myself project of our construct week at **Masai School** over 5 days.
+It is an individual project.
 
 ## Technology
 - HTML, CSS, JavaScript,ReactJs, Redux, ChakraUi, axios, Firebase.
@@ -44,39 +38,14 @@ The tripadvisor website has been cloned by myself project of our construct week 
 ![LandingPage](src/assests/readme/footer.png)
 *******************************************************************************
 
-<!--  
-## Demo
->Link - [TravelGo](https://tripadvisor-rsoni2843.web.app/)
+ 
+<!-- ## Demo
+>Link - [TravelGo](https://astonishing-yeot-482995.netlify.app/)
 >Project demonstration link- 
 <a href="#">click here</a> -->
 
-## Authors
-
-#### Sushant Kumar
-> Github: [Sushant Kumar](https://github.com/sushantkr961)
-Team lead, daily POC and worked on landing page, about page, navbar, tourism page, hotel details page
-
-#### Nipendra Soni
->Github: [Nipendra Soni](https://github.com/rsoni2843)
-worked on backend, signup, login and cart page
-
-#### Gaurav Kumar
->Github: [Gaurav Kumar](https://github.com/erGaurav13)
-worked on hotel list, admin dashboard
-
-#### Ravi Roshan
->Github: [Ravi Roshan](https://github.com/Ravi98351)
-worked on payment page and user details page
-
 ## Run on your Machine
-1. cd Frontend
+1. git clone https://github.com/sushantkr961/Naukri.com-Clone.git
 2. npm install
-3. npm start
-
-### Login as an admin 
-- email:- sushantonly961@gmail.com
-- password:- 1234
-
-
-
-
+3. npx json-server --watch db.json --port 3000
+4. npm start

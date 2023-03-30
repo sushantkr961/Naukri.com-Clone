@@ -30,7 +30,7 @@ const DreamJob = () => {
                 <option>7 years</option>
                 <option>8 years</option>
                 <option>9 years</option>
-                <option>10 years</option>
+                <option>10+ years</option>
             </Select>
             <Box>
             <InputGroup size='md'>
